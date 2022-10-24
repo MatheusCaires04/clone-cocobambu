@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.box__1,
+.box__2 {
+  @apply h-[360px] bg-cover bg-center flex flex-col justify-center gap-4;
+}
+.box__1 {
+  background: url("./assets/bg-box1.png") no-repeat;
+}
+.box__2 {
+  background: url("./assets/bg-box2.png") no-repeat;
+}
