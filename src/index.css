@@ -12,3 +12,7 @@
 .box__2 {
   background: url("./assets/bg-box2.png") no-repeat;
 }
+
+.item__releases:hover > .info__releases {
+  @apply top-0 bottom-0 duration-300;
+}

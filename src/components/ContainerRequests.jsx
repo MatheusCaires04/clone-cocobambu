@@ -5,8 +5,8 @@ import phone from "../assets/phone.png";
 const ContainerRequests = () => {
   return (
     <div className="bg-white px-8 py-8 w-full">
-      <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="box__1 px-8 lg:pl-16 rounded-md overflow-hidden relative w-full md:w-[80%] lg:w-full mx-auto">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="box__1 px-8 lg:pl-16 rounded-md overflow-hidden relative w-[80%] md:w-[60%] lg:w-full mx-auto">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black" />
           <div className="z-10 text-white">
             <span className="text-yellow-dark font-semibold text-lg">
@@ -22,7 +22,7 @@ const ContainerRequests = () => {
             <a href="#" className="absolute top-0 left-0 right-0 bottom-0"></a>
           </div>
         </div>
-        <div className="box__2 px-8 lg:pl-16 rounded-md overflow-hidden relative w-full md:w-[80%] lg:w-full mx-auto">
+        <div className="box__2 px-8 lg:pl-16 rounded-md overflow-hidden relative w-[80%] md:w-[60%] lg:w-full mx-auto">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black" />
           <div className="z-10 text-white">
             <span className="text-yellow-dark font-semibold text-lg">
@@ -40,7 +40,7 @@ const ContainerRequests = () => {
             <img
               src={phone}
               alt="/"
-              className="absolute right-[-2rem] top-[50%] translate-y-[-50%] w-72"
+              className="hidden md:flex absolute right-[-2rem] top-[50%] translate-y-[-50%] w-72"
             />
           </div>
         </div>

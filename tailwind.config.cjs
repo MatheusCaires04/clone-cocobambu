@@ -10,6 +10,7 @@ module.exports = {
       black: "#000",
       white: "#fff",
       "bg-map": "#FAFAFA",
+      "bg-transparent": "transparent",
     },
     extend: {
       dropShadow: {
@@ -18,6 +19,17 @@ module.exports = {
       boxShadow: {
         "shadow-map": "0 0 10px #cecece",
       },
+    },
+    screens: {
+      sm: "640px",
+
+      md: "768px",
+
+      lg: "1024px",
+
+      xl: "1200px",
+
+      "2xl": "1536px",
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],

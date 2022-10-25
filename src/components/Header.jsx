@@ -40,7 +40,7 @@ const Header = () => {
 
   return (
     <div className="fixed top-0 left-0 right-0 bg-white h-24 px-8 shadow-lg z-[9999]">
-      <div className="max-w-[1100px] mx-auto h-full flex items-center">
+      <div className="max-w-[1200px] mx-auto h-full flex items-center">
         <a href="#">
           <img
             src={Logo}
@@ -48,7 +48,7 @@ const Header = () => {
             className="w-56"
           />
         </a>
-        <nav className="w-full hidden lg:flex items-center justify-end">
+        <nav className="w-full hidden xl:flex items-center justify-end">
           <ul className="flex gap-4">
             {links.map((index) => {
               return (
@@ -94,9 +94,9 @@ const Header = () => {
         </nav>
 
         {/* MENU MOBILE */}
-        <nav className="w-full flex lg:hidden justify-end">
+        <nav className="w-full flex xl:hidden justify-end">
           <div
-            className="text-black flex lg:hidden text-3xl font-extrabold cursor-pointer"
+            className="text-black flex xl:hidden text-3xl font-extrabold cursor-pointer"
             onClick={openMenu}
           >
             {!menu ? <HiMenuAlt3 /> : <AiOutlineClose />}
@@ -105,51 +105,53 @@ const Header = () => {
           <div
             className={
               !menu
-                ? "pl-16 absolute h-screen w-full bg-white top-[100%] left-[100%] duration-200"
-                : "pl-16 absolute h-screen w-full bg-white top-[100%] left-0 duration-200"
+                ? "absolute h-screen w-full bg-white top-[100%] left-[100%] duration-200"
+                : "absolute h-screen w-full bg-white top-[100%] left-0 duration-200"
             }
           >
-            <ul className="flex flex-col gap-4">
-              {links.map((index) => {
-                return (
-                  <li
-                    key={index.id}
-                    className="text-base font-semibold text-black"
-                  >
-                    <a
-                      href="#"
-                      className="h-full items-center flex hover:underline duration-100"
+            <div className="pl-16 w-full h-full fixed">
+              <ul className="flex flex-col gap-4">
+                {links.map((index) => {
+                  return (
+                    <li
+                      key={index.id}
+                      className="text-base font-semibold text-black"
                     >
-                      {index.text}
-                    </a>
-                  </li>
-                );
-              })}
-              <a
-                href="#"
-                className="my-4 text-base font-bold text-white bg-yellow-dark rounded-md w-24 py-1 text-center hover:bg-brown duration-150"
-              >
-                DELIVERY
-              </a>
-              <a href="#" className="w-24">
-                <img src={site_yzzer} alt="/" className="w-full" />
-              </a>
-            </ul>
-            <div className="flex gap-4 mt-4">
-              <button href="#" className="w-6">
-                <img
-                  src={eua}
-                  alt="Ícone com desenho da bandeira do EUA em suas cores predominantes"
-                  className=" opacity-80 hover:opacity-100"
-                />
-              </button>
-              <button href="#" className="w-6">
-                <img
-                  src={br}
-                  alt="Ícone com desenho da bandeira do Brasil em suas cores predominantes"
-                  className="opacity-80 hover:opacity-100"
-                />
-              </button>
+                      <a
+                        href="#"
+                        className="h-full items-center flex hover:underline duration-100"
+                      >
+                        {index.text}
+                      </a>
+                    </li>
+                  );
+                })}
+                <a
+                  href="#"
+                  className="my-4 text-base font-bold text-white bg-yellow-dark rounded-md w-24 py-1 text-center hover:bg-brown duration-150"
+                >
+                  DELIVERY
+                </a>
+                <a href="#" className="w-24">
+                  <img src={site_yzzer} alt="/" className="w-full" />
+                </a>
+              </ul>
+              <div className="flex gap-4 mt-4">
+                <button href="#" className="w-6">
+                  <img
+                    src={eua}
+                    alt="Ícone com desenho da bandeira do EUA em suas cores predominantes"
+                    className=" opacity-80 hover:opacity-100"
+                  />
+                </button>
+                <button href="#" className="w-6">
+                  <img
+                    src={br}
+                    alt="Ícone com desenho da bandeira do Brasil em suas cores predominantes"
+                    className="opacity-80 hover:opacity-100"
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </nav>
