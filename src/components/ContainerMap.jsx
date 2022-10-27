@@ -9,7 +9,7 @@ const ContainerMap = () => {
   return (
     <div className="w-full px-8 py-16">
       <div className="relative max-w-[1200px] mx-auto flex xl:grid lg:grid-cols-2 rounded-md shadow-shadow-map">
-        <div className="px-8 md:pl-16 md:pr-32 py-16 flex flex-col justify-center mx-auto w-[70%] xl:w-full">
+        <div className="pl-2 pr-2 md:pl-16 md:pr-32 py-16 flex flex-col justify-center mx-auto w-[70%] xl:w-full">
           <span className="text-yellow-dark text-xl">Encontrar</span>
           <h1 className="text-3xl md:text-5xl font-bold mb-8 text-brown">
             Restaurantes

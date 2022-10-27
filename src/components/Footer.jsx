@@ -12,7 +12,7 @@ const Footer = () => {
     <div className="bg-brown w-full px-8 mt-20">
       <div className="max-w-[1200px] mx-auto">
         <div className="xl:flex py-16 xl:py-24 gap-[25px]">
-          <div className="w-[300px] flex flex-col xl:justify-between">
+          <div className="w-full md:w-[300px] flex flex-col xl:justify-between">
             <a href="#" className="mb-4">
               <img src={logo_footer} alt="" className="w-72" />
             </a>
@@ -31,8 +31,8 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="flex w-[400px] text-white font-normal text-lg 2xl:text-xl my-8 xl:my-0">
-            <ul className="flex flex-col gap-3 w-[50%]">
+          <div className="flex flex-col md:flex-row w-full md:w-[400px] text-white font-normal text-lg 2xl:text-xl my-8 xl:my-0">
+            <ul className="flex flex-col gap-3 w-full md:w-[50%]">
               <li className="hover:underline">
                 <a href="#">Quem somos</a>
               </li>
@@ -49,7 +49,7 @@ const Footer = () => {
                 <a href="#">Contato</a>
               </li>
             </ul>
-            <ul className="flex flex-col gap-3 w-[50%]">
+            <ul className="flex flex-col gap-3 w-full md:w-[50%] mt-3 md:mt-0">
               <li className="hover:underline">
                 <a href="#">Trabalhe conosco</a>
               </li>
@@ -58,7 +58,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-[450px]">
+          <div className="w-full md:w-[450px]">
             <div className="flex">
               <a href="#">
                 <img
@@ -90,8 +90,12 @@ const Footer = () => {
                 <MdOutlineNavigateNext className="absolute top-[50%] translate-y-[-50%] right-4 text-white text-2xl font-black bg-yellow-dark cursor-pointer rounded-md" />
               </div>
               <div className="flex items-center mt-2">
-                <input type="checkbox" id="confirm" />
-                <label for="confirm" className="ml-2 text-base text-white">
+                <input
+                  type="checkbox"
+                  id="confirm"
+                  className="w-[20px] h-[20px]"
+                />
+                <label htmlFor="confirm" className="ml-2 text-base text-white">
                   Aceito a <a href="#">política de privacidade</a>
                 </label>
               </div>

@@ -1,23 +1,50 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-import desktop_banner_1 from "../assets/banner-1.png";
-import desktop_banner_2 from "../assets/banner-2.png";
-import desktop_banner_3 from "../assets/banner-3.png";
-import desktop_banner_4 from "../assets/banner-4.jpg";
-import desktop_banner_5 from "../assets/banner-5.png";
-import desktop_banner_6 from "../assets/banner-6.jpg";
-import desktop_banner_7 from "../assets/banner-7.png";
+import { Banners } from "./ListBanner";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
 
 const Hero = () => {
   return (
     <div className="w-full h-[calc(100vh-6rem)] mt-[6rem] pb-8">
-      <div className="w-full h-full overflow-auto scrollbar-hide">
-        <div className="w-[400%] h-full flex">
-          <div className="bg-brown w-[25%] h-full"></div>
-          <div className="bg-brown-dark w-[25%] h-full"></div>
-          <div className="bg-brown w-[25%] h-full"></div>
-          <div className="bg-brown-dark w-[25%] h-full"></div>
-        </div>
+      <div className="hidden md:flex w-full 2xl:max-w-[1200px] mx-auto h-full overflow-hidden relative">
+        <Swiper
+          spaceBetween={0}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          {Banners.map((item) => {
+            return (
+              <SwiperSlide>
+                <img src={item.url} alt="" />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      </div>
+      <div className="flex md:hidden w-full h-full overflow-hidden relative">
+        <Swiper
+          spaceBetween={0}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          {Banners.map((item) => {
+            return (
+              <SwiperSlide>
+                <img src={item.urlMobile} alt="" />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
     </div>
   );
